@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Teleporter : MonoBehaviour {
 	public GameObject TeleportTo;
+    public Material NewSkybox;
 
 	// Use this for initialization
 	void Start () {
@@ -17,5 +18,7 @@ public class Teleporter : MonoBehaviour {
 
 		other.transform.position = TeleportTo.transform.position;
 		other.transform.position += displacement;
+
+        RenderSettings.skybox = NewSkybox;
 	}
 }
